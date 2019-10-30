@@ -28,7 +28,7 @@ export class Episodes extends Component {
                   <h5 className="card-title">{todo.name}</h5>
                   <h5 className="card-text">{todo.air_date}</h5>
                   <h6 className="card-text">{todo.episode}</h6>
-                  <a href={todo.url} className="btn btn-primary">Ver Capítulo</a>
+                  <a href={todo.url} className="btn btn-primary">GO</a>
                 </div>
                </div>
               </div>
