@@ -9,10 +9,10 @@
   text-transform: uppercase;
 }
 
-nav a {
+/* nav a {
   color: #ffffff;
   margin: 0 2rem;
-}
+} */
 
 nav a:hover {
   color: #000000;

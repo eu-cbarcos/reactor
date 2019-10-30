@@ -7,7 +7,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="container-home">
-        <img src={rick}></img>
+        <img src={rick} alt="Rick y Mortis Site"></img>
       </div>
     );
   }
