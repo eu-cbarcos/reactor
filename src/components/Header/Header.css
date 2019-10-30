@@ -1,0 +1,19 @@
+.navbar {
+  background-color: #47a0b8;
+}
+
+.logo {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: #ffffff;
+  margin: 0 2rem;
+}
+
+nav a:hover {
+  color: #000000;
+}

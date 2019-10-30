@@ -1,0 +1,9 @@
+.container-home {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.container-home img {
+  max-width: 50rem;
+}
