@@ -28,7 +28,14 @@ class Characters extends React.Component {
               return (
                 <li key={index}>
                   <img src={character.image} />
-                  <div>{character.name}</div>
+                  <div>
+                    <h3>{character.name}</h3>
+                    <p className="description">Especie: {character.species}</p>
+                    <p className="description">Estado: {character.status}</p>
+                    <p className="description">
+                      Type: {character.type ? character.type : "Ninguno"}
+                    </p>
+                  </div>
                 </li>
               );
             })}
