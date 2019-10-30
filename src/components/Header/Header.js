@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Home from "../Home/home";
-import Episodes from "../Episodes";
+import Episodes from "../Episodes/Episodes";
 import Characters from "../Characters/characters";
 
 import "./Header.css";
