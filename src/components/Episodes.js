@@ -5,7 +5,8 @@ export class Episodes extends Component {
     super();
   this.state = {
     hasErrors: false,
-    episodios: [{}]
+    episodios: [{}],
+    img : 'https://images-na.ssl-images-amazon.com/images/I/51aOMcjlkyL._SY445_.jpg'
   };
 }
   componentDidMount() {
@@ -16,28 +17,27 @@ export class Episodes extends Component {
   }
 
   render(){
-    
-    const todo =  this.state.episodios.map((todo, i)=>{
         return (
-        <div className="row">
-          <div className="col-4">
-          <div className="card text-white bg-dark mb-3" style={{width: '18rem'}}>
+          <div className="container">
+          <div className="row">
+          {this.state.episodios.map(todo =>
+            <div className="col-md-4 d-flex align-items-stretch">
+              <div className="card text-white bg-dark mb-3" style={{width: '18rem'}}>
                 <div className="card-body">
-                  <h3 className="card-title">{todo.name}</h3>
-                  <p className="card-text">{todo.episode}</p>
-                  <a href="{todo.url}" className="btn btn-primary">Go somewhere</a>
+                  <img src={this.state.img} style={{width:'50%'}} alt={todo.name}></img>
+                  <h5 className="card-title">{todo.name}</h5>
+                  <h5 className="card-text">{todo.air_date}</h5>
+                  <h6 className="card-text">{todo.episode}</h6>
+                  <a href={todo.url} className="btn btn-primary">Ver Capítulo</a>
                 </div>
+               </div>
               </div>
-          </div>
-        </div>
+          )}
 
-        )
-      })
-      return (
-          <div>
-            {todo}
           </div>
-        );
+
+        </div>
+        )
       }
     }
 
