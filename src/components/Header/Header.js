@@ -15,8 +15,8 @@ class Header extends React.Component {
             <div className="logo">Rick and Morty site</div>
             <nav className="nav">
               <Link to="/">Home</Link>
-              <Link to="/characters">Episodes</Link>
-              <Link to="/episodes">Characters</Link>
+              <Link to="/episodes">Episodes</Link>
+              <Link to="/characters">Characters</Link>
             </nav>
           </div>
           <div>

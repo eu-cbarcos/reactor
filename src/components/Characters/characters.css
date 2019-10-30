@@ -1,0 +1,19 @@
+.containers-characters {
+  display: flex;
+  justify-content: center;
+}
+
+.ul-characters li {
+  display: flex;
+  align-items: center;
+
+  background-color: #333a40;
+  margin: 0.5rem;
+  list-style: none;
+  color: #d0f5ff;
+}
+
+.ul-characters img {
+  max-width: 5rem;
+  margin-right: 1rem;
+}
