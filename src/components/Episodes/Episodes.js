@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import Pagination from '../Pagination/pagination'
 
 export class Episodes extends Component {
   constructor(){
@@ -18,6 +19,7 @@ export class Episodes extends Component {
 
   render(){
         return (
+
           <div className="container">
           <div className="row">
           {this.state.episodios.map(todo =>
@@ -31,9 +33,12 @@ export class Episodes extends Component {
                   <a href={todo.url} className="btn btn-primary">GO</a>
                 </div>
                </div>
+               
               </div>
           )}
-
+          </div>
+          <div className="containter">
+                <Pagination></Pagination>
           </div>
 
         </div>
