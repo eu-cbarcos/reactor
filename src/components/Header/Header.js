@@ -5,6 +5,7 @@ import Episodes from "../Episodes/Episodes";
 import Characters from "../Characters/characters";
 import Locations from "../Locations/locations";
 import LocationDetails from "../LocationDetails/locationdetails";
+import Episode from "../Episode/Episode";
 
 import "./Header.css";
 
@@ -29,6 +30,7 @@ class Header extends React.Component {
               <Route path="/episodes" component={Episodes} />
               <Route path="/locations" component={Locations} />
               <Route path="/locationdetails/:id" component={LocationDetails} />
+              <Route path="/episode/:id" component={Episode} />
             </Switch>
           </div>
         </Router>

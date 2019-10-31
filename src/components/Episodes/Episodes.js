@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Pagination from "../Pagination/pagination";
 
 export class Episodes extends Component {
@@ -38,7 +37,8 @@ export class Episodes extends Component {
                   <h5 className="card-title">{episodio.name}</h5>
                   <h5 className="card-text">{episodio.air_date}</h5>
                   <h6 className="card-text">{episodio.episode}</h6>
-                  <Link to="/episode" className="btn btn-primary">Detail</Link>                  
+                  <a href={`/episode/${episodio.id}`} className="btn btn-primary"
+                  >Details</a>
                 </div>
               </div>
             </div>

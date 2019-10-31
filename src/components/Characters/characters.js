@@ -20,7 +20,7 @@ class Characters extends React.Component {
   render() {
     const { characters } = this.state;
     return (
-      <div>
+      <div className="container">
         <h1>List of Characters</h1>
         <div className="containers-characters">
           <ul className="ul-characters">
