@@ -7,6 +7,8 @@ import Locations from "../Locations/locations";
 import LocationDetails from "../LocationDetails/locationdetails";
 import Episode from "../Episode/Episode";
 
+import logo from "../../assets/logo.png";
+
 import "./Header.css";
 
 class Header extends React.Component {
@@ -14,15 +16,23 @@ class Header extends React.Component {
     return (
       <header className="App-header">
         <Router>
-          <div className="navbar">
-            <div className="logo">Rick and Morty site</div>
-            <nav className="nav">
-              <Link to="/">Home</Link>
-              <Link to="/episodes">Episodes</Link>
-              <Link to="/characters">Characters</Link>
-              <Link to="/locations">Locations</Link>
-            </nav>
-          </div>
+          <nav className="navbar  navbar-expand-lg navbar-dark">
+            <a href="/" className="navbar-brand"><img src={logo} alt="Rick and Morty site" /></a>
+            <ul className="navbar-nav ml-md-auto">
+              <li className="nav-item">
+                <Link to="/" className="nav-link">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/episodes" className="nav-link">Episodes</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/characters" className="nav-link">Characters</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/locations" className="nav-link">Locations</Link>
+              </li>
+            </ul>
+          </nav>
           <div>
             <Switch>
               <Route exact path="/" component={Home} />
