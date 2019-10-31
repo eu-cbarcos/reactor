@@ -1,11 +1,16 @@
 .navbar {
-  background-color: #47a0b8;
+  background-color: #2b768a;
 }
 
 .logo {
   color: #ffffff;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.navbar .navbar-brand img{
+  max-height: 80px;
+  width: auto;
 }
 
 /* nav a {
