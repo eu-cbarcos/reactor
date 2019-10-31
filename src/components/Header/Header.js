@@ -7,6 +7,8 @@ import Locations from "../Locations/locations";
 import LocationDetails from "../LocationDetails/locationdetails";
 import Episode from "../Episode/Episode";
 
+import logo from "../../assets/logo.png";
+
 import "./Header.css";
 
 class Header extends React.Component {
@@ -15,8 +17,8 @@ class Header extends React.Component {
       <header className="App-header">
         <Router>
           <nav className="navbar  navbar-expand-lg navbar-dark">
-            <a href="/" className="navbar-brand">Rick and Morty site</a>
-            <ul className="navbar-nav mr-auto">
+            <a href="/" className="navbar-brand"><img src={logo} alt="Rick and Morty site" /></a>
+            <ul className="navbar-nav ml-md-auto">
               <li className="nav-item">
                 <Link to="/" className="nav-link">Home</Link>
               </li>

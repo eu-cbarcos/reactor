@@ -23,20 +23,20 @@ export class Episodes extends Component {
       <div className="container">
         <div className="row">
           {this.state.episodios.map(episodio => (
-            <div className="col-md-4 d-flex align-items-stretch">
+            <div className="col-md-3 d-flex align-items-stretch">
               <div
                 className="card text-white bg-dark mb-3"
                 style={{ width: "18rem" }}
               >
+                <img
+                  className="card-img-top"
+                  src={this.state.img}
+                  alt={episodio.name}
+                ></img>
                 <div className="card-body">
-                  <img
-                    src={this.state.img}
-                    style={{ width: "50%" }}
-                    alt={episodio.name}
-                  ></img>
-                  <h5 className="card-title">{episodio.name}</h5>
-                  <h5 className="card-text">{episodio.air_date}</h5>
-                  <h6 className="card-text">{episodio.episode}</h6>
+                  <h4 className="card-title">{episodio.name}</h4>
+                  <p className="card-subtitle mb-2 text-muted">{episodio.air_date}</p>
+                  <p className="card-text">{episodio.episode}</p>
                   <a href={`/episode/${episodio.id}`} className="btn btn-primary"
                   >Details</a>
                 </div>
