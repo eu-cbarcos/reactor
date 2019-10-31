@@ -29,7 +29,7 @@ class Characters extends React.Component {
                 <li key={index}>
                   <img src={character.image} />
                   <div>
-                    <h3>{character.name}</h3>
+                    <h4>{character.name}</h4>
                     <p className="description">Especie: {character.species}</p>
                     <p className="description">Estado: {character.status}</p>
                     <p className="description">
