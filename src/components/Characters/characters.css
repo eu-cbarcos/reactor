@@ -17,3 +17,8 @@
   max-width: 5rem;
   margin-right: 1rem;
 }
+.description {
+  font-size: 0.8rem;
+  text-align: left;
+  margin: 0;
+}
