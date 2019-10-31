@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Home from "../Home/home";
 import Episodes from "../Episodes/Episodes";
 import Characters from "../Characters/characters";
+import Locations from "../Locations/locations";
 
 import "./Header.css";
 
@@ -17,6 +18,7 @@ class Header extends React.Component {
               <Link to="/">Home</Link>
               <Link to="/episodes">Episodes</Link>
               <Link to="/characters">Characters</Link>
+              <Link to="/locations">Locations</Link>
             </nav>
           </div>
           <div>
@@ -24,6 +26,7 @@ class Header extends React.Component {
               <Route exact path="/" component={Home} />
               <Route path="/characters" component={Characters} />
               <Route path="/episodes" component={Episodes} />
+              <Route path="/locations" component={Locations} />
             </Switch>
           </div>
         </Router>
