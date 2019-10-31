@@ -12,11 +12,7 @@ export class LocationDetails extends Component {
       .then(res => res.json())
       .then(res => {
         this.setState({ details: res });
-        //console.log(res.residents);
         this.setState({ residents: res.residents });
-        // res.residents.map(resident => {
-        //   console.log(resident);
-        // });
       })
       .catch(() => this.setState({ hasErrors: true }));
   }
@@ -47,9 +43,6 @@ export class LocationDetails extends Component {
             </div>
           </div>
         </div>
-        {/* {this.state.details.map(data => (
-          <div>rrr</div>
-        ))} */}
       </div>
     );
   }

@@ -27,10 +27,11 @@ export class Locations extends Component {
                 style={{ width: "18rem" }}
               >
                 <div className="card-body">
-                  <h5>{todo.name}</h5>
-                  <p>{todo.type}</p>
-                  <p>{todo.dimension}</p>
+                  <h5 title={todo.name}>{todo.name}</h5>
+                  <p title={todo.type}>{todo.type}</p>
+                  <p title={todo.dimension}>{todo.dimension}</p>
                   <a
+                    title={todo.id}
                     href={`/locationdetails/${todo.id}`}
                     className="btn btn-primary"
                   >
