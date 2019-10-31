@@ -30,6 +30,12 @@ export class Locations extends Component {
                   <h5>{todo.name}</h5>
                   <p>{todo.type}</p>
                   <p>{todo.dimension}</p>
+                  <a
+                    href={`/locationdetails/${todo.id}`}
+                    className="btn btn-primary"
+                  >
+                    Go to Details
+                  </a>
                 </div>
               </div>
             </div>
