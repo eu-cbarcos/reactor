@@ -18,7 +18,7 @@ export class Locations extends Component {
   render() {
     return (
       <div className="container">
-        <h3>Locations</h3>
+        <h1>Locations</h1>
         <div className="row">
           {this.state.locations.map(todo => (
             <div className="col-md-4 d-flex align-items-stretch">
@@ -27,9 +27,9 @@ export class Locations extends Component {
                 style={{ width: "18rem" }}
               >
                 <div className="card-body">
-                  <h5 title={todo.name}>{todo.name}</h5>
-                  <p title={todo.type}>{todo.type}</p>
-                  <p title={todo.dimension}>{todo.dimension}</p>
+                  <h5 className="card-title" title={todo.name}>{todo.name}</h5>
+                  <p className="card-text" title={todo.type}>{todo.type}</p>
+                  <p className="card-subtitle mb-2 text-muted" title={todo.dimension}>{todo.dimension}</p>
                   <a
                     title={todo.id}
                     href={`/locationdetails/${todo.id}`}
