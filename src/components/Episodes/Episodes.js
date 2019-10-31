@@ -37,9 +37,8 @@ export class Episodes extends Component {
                   <h5 className="card-title">{episodio.name}</h5>
                   <h5 className="card-text">{episodio.air_date}</h5>
                   <h6 className="card-text">{episodio.episode}</h6>
-                  <a href={episodio.url} className="btn btn-primary">
-                    GO
-                  </a>
+                  <a href={`/episode/${episodio.id}`} className="btn btn-primary"
+                  >Details</a>
                 </div>
               </div>
             </div>
