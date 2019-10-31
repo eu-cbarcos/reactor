@@ -1,15 +1,16 @@
-import React,{Component} from 'react';
-import Pagination from '../Pagination/pagination'
+import React, { Component } from "react";
+import Pagination from "../Pagination/pagination";
 
 export class Episodes extends Component {
-  constructor(){
+  constructor() {
     super();
-  this.state = {
-    hasErrors: false,
-    episodios: [{}],
-    img : 'https://images-na.ssl-images-amazon.com/images/I/51aOMcjlkyL._SY445_.jpg'
-  };
-}
+    this.state = {
+      hasErrors: false,
+      episodios: [{}],
+      img:
+        "https://images-na.ssl-images-amazon.com/images/I/51aOMcjlkyL._SY445_.jpg"
+    };
+  }
   componentDidMount() {
     fetch("https://rickandmortyapi.com/api/episode/")
       .then(res => res.json())
@@ -17,34 +18,39 @@ export class Episodes extends Component {
       .catch(() => this.setState({ hasErrors: true }));
   }
 
-  render(){
-        return (
-
-          <div className="container">
-          <div className="row">
-          {this.state.episodios.map(todo =>
+  render() {
+    return (
+      <div className="container">
+        <div className="row">
+          {this.state.episodios.map(episodio => (
             <div className="col-md-4 d-flex align-items-stretch">
-              <div className="card text-white bg-dark mb-3" style={{width: '18rem'}}>
+              <div
+                className="card text-white bg-dark mb-3"
+                style={{ width: "18rem" }}
+              >
                 <div className="card-body">
-                  <img src={this.state.img} style={{width:'50%'}} alt={todo.name}></img>
-                  <h5 className="card-title">{todo.name}</h5>
-                  <h5 className="card-text">{todo.air_date}</h5>
-                  <h6 className="card-text">{todo.episode}</h6>
-                  <a href={todo.url} className="btn btn-primary">GO</a>
+                  <img
+                    src={this.state.img}
+                    style={{ width: "50%" }}
+                    alt={episodio.name}
+                  ></img>
+                  <h5 className="card-title">{episodio.name}</h5>
+                  <h5 className="card-text">{episodio.air_date}</h5>
+                  <h6 className="card-text">{episodio.episode}</h6>
+                  <a href={episodio.url} className="btn btn-primary">
+                    GO
+                  </a>
                 </div>
-               </div>
-               
               </div>
-          )}
-          </div>
-          <div className="containter">
-                <Pagination></Pagination>
-          </div>
-
+            </div>
+          ))}
         </div>
-        )
-      }
-    }
-
+        <div className="containter">
+          <Pagination></Pagination>
+        </div>
+      </div>
+    );
+  }
+}
 
 export default Episodes;
