@@ -28,6 +28,7 @@ class Header extends React.Component {
               <Route exact path="/" component={Home} />
               <Route path="/characters" component={Characters} />
               <Route path="/episodes" component={Episodes} />
+              <Route path="/episodes/:id" component={Episodes} />
               <Route path="/locations" component={Locations} />
               <Route path="/locationdetails/:id" component={LocationDetails} />
               <Route path="/episode/:id" component={Episode} />

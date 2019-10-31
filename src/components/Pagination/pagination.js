@@ -6,7 +6,8 @@ export class Pagination extends Component {
     this.state = {
       hasErrors: false,
       paginacion: {
-        previous: "#"
+        previous: "",
+        next: "#"
       }
     };
   }
@@ -32,20 +33,23 @@ export class Pagination extends Component {
           <nav aria-label="Paginacion">
             <ul className="pagination">
               <li className="page-item">
-                <a className="page-link" href={this.state.paginacion.previous}>
-                  Previous
+                <a className="page-link" href={`/episodes/1`}>
+                  First
                 </a>
               </li>
-              {this.paginationLoop().map((item, index) => (
+              {this.paginationLoop().map(item => (
                 <li className="page-item">
-                  <a className="page-link" href="/">
+                  <a className="page-link" href={`/episodes/${item}`}>
                     {item}
                   </a>
                 </li>
               ))}
               <li className="page-item">
-                <a className="page-link" href={this.state.paginacion.next}>
-                  Next
+                <a
+                  className="page-link"
+                  href={`/episodes/${this.state.paginacion.pages}`}
+                >
+                  Last
                 </a>
               </li>
             </ul>
