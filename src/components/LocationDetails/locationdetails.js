@@ -3,17 +3,21 @@ import React, { Component } from "react";
 export class LocationDetails extends Component {
   constructor() {
     super();
-    this.state = { details: {}, hasErrors: false };
+    this.state = { details: [{}], residents: [], hasErrors: false };
   }
 
   componentDidMount() {
     let apidetails = `https://rickandmortyapi.com/api/location/${this.props.match.params.id}`;
     fetch(apidetails)
       .then(res => res.json())
-      //   .then(res => {
-      //     console.log(res);
-      //   })
-      .then(res => this.setState({ details: res }))
+      .then(res => {
+        this.setState({ details: res });
+        //console.log(res.residents);
+        this.setState({ residents: res.residents });
+        // res.residents.map(resident => {
+        //   console.log(resident);
+        // });
+      })
       .catch(() => this.setState({ hasErrors: true }));
   }
 
@@ -22,18 +26,23 @@ export class LocationDetails extends Component {
       <div className="container">
         <h3>Location Details</h3>
         <div className="row">
-          <div className="col-md-4 d-flex align-items-stretch">
+          <div className="align-items-center">
             <div
               className="card text-white bg-dark mb-3"
-              style={{ width: "18rem" }}
+              style={{ width: "70rem" }}
             >
               <div className="card-body">
                 <h5>{this.state.details.type}</h5>
                 <p>{this.state.details.name}</p>
-                {/* <p>{this.state.details.residents}</p> */}
-                {/* {this.state.detailsresidents.map(resident => (
-                  <p>{resident}</p>
-                ))} */}
+
+                {this.state.residents.map(resident => (
+                  <div>
+                    <a href={resident} style={{ fontSize: "12px" }}>
+                      {resident}
+                    </a>
+                    <br />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
