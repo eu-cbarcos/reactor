@@ -26,16 +26,22 @@ export class Episode extends Component{
                 <div className="row">
                     <div className="col-sm-6">
 
-                        <h2>Details</h2>
+                        <div className="card bg-dark">
+                            <div className="card-body">
 
-                        <div className="item episode">
-                            <div className="d-inline p-2 bg-dark">Episode</div>
-                            <div className="d-inline p-2">{this.state.details.episode}</div>
-                        </div>
+                                <h2 class="card-title">Details</h2>
 
-                        <div className="item air_date">
-                            <div className="d-inline p-2 bg-dark text-white">Air date</div>
-                            <div className="d-inline p-2">{this.state.details.air_date}</div>
+                                <div className="item episode">
+                                    <div className="d-inline p-2 bg-primary">Episode</div>
+                                    <div className="d-inline p-2">{this.state.details.episode}</div>
+                                </div>
+
+                                <div className="item air_date">
+                                    <div className="d-inline p-2 bg-primary text-white">Air date</div>
+                                    <div className="d-inline p-2">{this.state.details.air_date}</div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

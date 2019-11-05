@@ -36,13 +36,17 @@ export class Episodes extends Component {
                 className="card text-white bg-dark mb-3"
                 style={{ width: "18rem" }}
               >
-                <img
-                  className="card-img-top"
-                  src={this.state.img}
-                  alt={episodio.name}
-                ></img>
+                <a href={`/episode/${episodio.id}`} className="text-white">
+                  <img
+                    className="card-img-top"
+                    src={this.state.img}
+                    alt={episodio.name}
+                  ></img>
+                </a>
                 <div className="card-body">
-                  <h4 className="card-title">{episodio.name}</h4>
+                  <h4 className="card-title">
+                    <a href={`/episode/${episodio.id}`} className="text-white">{episodio.name}</a>
+                  </h4>                  
                   <p className="card-subtitle mb-2 text-muted">
                     {episodio.air_date}
                   </p>
