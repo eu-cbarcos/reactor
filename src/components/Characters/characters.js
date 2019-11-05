@@ -1,5 +1,7 @@
 import React from "react";
 import "./characters.css";
+
+import Character from "./CardCharacter/CardCharacter";
 class Characters extends React.Component {
   constructor() {
     super();
@@ -26,17 +28,13 @@ class Characters extends React.Component {
           <ul className="ul-characters">
             {characters.map((character, index) => {
               return (
-                <li key={index}>
-                  <img src={character.image} />
-                  <div>
-                    <h4>{character.name}</h4>
-                    <p className="description">Especie: {character.species}</p>
-                    <p className="description">Estado: {character.status}</p>
-                    <p className="description">
-                      Type: {character.type ? character.type : "Ninguno"}
-                    </p>
-                  </div>
-                </li>
+                <Character
+                  img={character.image}
+                  species={character.species}
+                  status={character.status}
+                  type={character.type}
+                  index={character.index}
+                />
               );
             })}
           </ul>
