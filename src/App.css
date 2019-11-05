@@ -24,3 +24,11 @@
 .container{
   padding: 2rem 1rem;
 }
+.App .bg-primary
+{
+  background-color: #2b768a !important;
+}
+.App .btn-primary
+{
+  background-color: #2b768a !important;
+}
