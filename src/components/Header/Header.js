@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Home from '../Home/home';
 import Episodes from '../Episodes/Episodes';
-import Characters from '../Characters/characters';
+import Characters from '../Characters/default';
 import Locations from '../Locations/locations';
 import LocationDetails from '../LocationDetails/locationdetails';
 import Episode from '../Episode/Episode';
